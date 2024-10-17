@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var sortRouter = require('./routes/Algorithm/Sorting');
-
+var searchRouter = require('./routes/Algorithm/Searching');
 var app = express();
 
 // view engine setup
@@ -19,7 +19,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', sortRouter);
-
+app.use('/', searchRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
