@@ -57,19 +57,20 @@ router.post("/linearSearch", (req, res) => {
     res.json({ message: `Target value found at index ${search}` });
   }
 
-  router.post("/binarySearch", (req, res) => {
-    const { num, target } = req.body;
-    if (!num || !Array.isArray(num)) {
-      res.status(422).json({ error: "Invalid Format" });
-    }
-    const sortedArray = num.sort((a, b) => a - b); 
-    const search = binarySearch(sortedArray, target);
-    if (search.lenth > 0) {
-      res.json({ message: `Target value found at index ${index}` });
-    } else {
-      res.json({ message: `Target Value not found` });
-    }
-  });
+ router.post("/binarySearch", (req, res) => {
+  const { num, target } = req.body;
+  if (!num || !Array.isArray(num)) {
+    return res.status(422).json({ error: "Invalid Format" });
+  }
+
+  const sortedArray = num.sort((a, b) => a - b);
+  const indices = binarySearch(sortedArray, target);
+
+  if (indices !== -1) {
+    res.json({ message: `Target value found at indices ${indices.join(", ")}` });
+  } else {
+    res.json({ message: `Target Value not found` });
+  }
 });
 
 module.exports = router;
