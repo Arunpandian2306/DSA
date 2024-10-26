@@ -13,13 +13,27 @@ function linearSearch(arr, target) {
 }
 
 function binarySearch(arr, target) {
-  const index = [];
+  const indices = [];
   let left = 0;
   let right = arr.length - 1;
+
   while (left <= right) {
     const mid = Math.floor((left + right) / 2);
     if (arr[mid] === target) {
-      index.push(mid);
+      indices.push(mid);
+      // Check for duplicates to the left
+      let tempLeft = mid - 1;
+      while (tempLeft >= 0 && arr[tempLeft] === target) {
+        indices.push(tempLeft);
+        tempLeft--;
+      }
+      // Check for duplicates to the right
+      let tempRight = mid + 1;
+      while (tempRight < arr.length && arr[tempRight] === target) {
+        indices.push(tempRight);
+        tempRight++;
+      }
+      break; // Exit the loop once found
     }
     if (arr[mid] < target) {
       left = mid + 1;
@@ -28,7 +42,7 @@ function binarySearch(arr, target) {
     }
   }
 
-  return -1;
+  return indices.length > 0 ? indices : -1; // Return indices or -1 if not found
 }
 
 router.post("/linearSearch", (req, res) => {
