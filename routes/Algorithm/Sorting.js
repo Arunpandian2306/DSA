@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-
 function bubble(arr) {
     const len = arr.length;
     for (let i = 0; i < len; i++) {
