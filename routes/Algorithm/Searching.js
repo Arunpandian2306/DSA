@@ -56,6 +56,7 @@ router.post("/linearSearch", (req, res) => {
   } else {
     res.json({ message: `Target value found at index ${search}` });
   }
+});
 
  router.post("/binarySearch", (req, res) => {
   const { num, target } = req.body;
