@@ -54,23 +54,23 @@ const newarr1 = arrfilter.filter((arr) => arr % 3 !== 0 && arr % 5 !== 0);
 console.log("arrfilter>>>", JSON.stringify(newarr1)); // arrfilter>>> [67]
 
 // reduce(): Executes a reducer function on each element of the array, resulting in a single output value.
-const arrreduce = [1,2,3,4,5,6]
-const newarr2 = arrreduce.reduce((acc,curr)=> acc+curr,0 )
-console.log("arrreduce>>>", JSON.stringify(newarr2)) //arrreduce>>> 21
+const arrreduce = [1, 2, 3, 4, 5, 6];
+const newarr2 = arrreduce.reduce((acc, curr) => acc + curr, 0);
+console.log("arrreduce>>>", JSON.stringify(newarr2)); //arrreduce>>> 21
 
 // every(): Tests whether all elements in the array pass the test implemented by the provided function.
-const arrevery = [2,4,6,8]
-const everyarr1 = arrevery.every(num => num%2 === 0 )
-console.log("arrevery1>>>", JSON.stringify(everyarr1)) // arrevery1>>> true
-const everyarr2 = arrevery.every(num => num%4 !== 0 )
-console.log("arrevery2>>>", JSON.stringify(everyarr2)) // arrevery2>>> false
+const arrevery = [2, 4, 6, 8];
+const everyarr1 = arrevery.every((num) => num % 2 === 0);
+console.log("arrevery1>>>", JSON.stringify(everyarr1)); // arrevery1>>> true
+const everyarr2 = arrevery.every((num) => num % 4 !== 0);
+console.log("arrevery2>>>", JSON.stringify(everyarr2)); // arrevery2>>> false
 
 // some(): Tests whether at least one element in the array passes the test implemented by the provided function.
-const arrsome = [2,3,4,6,8]
-const somearr1 = arrevery.some(num => num%3 === 0 )
-console.log("arrsome1>>>", JSON.stringify(somearr1))
-const somearr2 = arrevery.some(num => num%5 === 0 )
-console.log("arrsome2>>>", JSON.stringify(somearr2))
+const arrsome = [2, 3, 4, 6, 8];
+const somearr1 = arrevery.some((num) => num % 3 === 0);
+console.log("arrsome1>>>", JSON.stringify(somearr1));
+const somearr2 = arrevery.some((num) => num % 5 === 0);
+console.log("arrsome2>>>", JSON.stringify(somearr2));
 
 // Searching/Finding Elements:
 // indexOf(): Returns the first index at which a given element can be found in the array, or -1 if it is not present.
