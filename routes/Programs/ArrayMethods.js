@@ -77,29 +77,30 @@ console.log("arrsome2>>>", JSON.stringify(somearr2));
 // Searching/Finding Elements:
 
 // indexOf(): Returns the first index at which a given element can be found in the array, or -1 if it is not present.
-const arrindex = [3,2,4,5,6,7];
+const arrindex = [3, 2, 4, 5, 6, 7];
 const indexarr = arrindex.indexOf(4);
-console.log("arrindex>>>",indexarr); // 2
+console.log("arrindex>>>", indexarr); // 2
 
 // lastIndexOf(): Returns the last index at which a given element can be found in the array, or -1 if it is not present.
-const arrlastindex = [3,2,4,5,6,7,4,5,8];
+const arrlastindex = [3, 2, 4, 5, 6, 7, 4, 5, 8];
 const lastarr = arrlastindex.lastIndexOf(4);
-console.log("lastarr>>>",lastarr); // 6
+console.log("lastarr>>>", lastarr); // 6
 
 // includes(): Determines whether an array includes a certain value among its entries, returning true or false as appropriate.
-const arrinclude = [3,2,4,5,6,7,4,5,8];
+const arrinclude = [3, 2, 4, 5, 6, 7, 4, 5, 8];
 const includearr = arrinclude.includes(4);
-console.log("arrinclude>>>",includearr); // true
+console.log("arrinclude>>>", includearr); // true
 
 // find(): Returns the first element in the provided array that satisfies the provided testing function. Otherwise, undefined is returned.
-const arrfind = [1,5,65,73,8]
-const findarr = arrfind.find(num => num > 12)
-console.log("arrfind>>>", JSON.stringify(findarr))
+const arrfind = [1, 5, 65, 73, 8];
+const findarr = arrfind.find((num) => num > 12);
+console.log("arrfind>>>", JSON.stringify(findarr));
 
 // findIndex(): Returns the index of the first element in the array that satisfies the provided testing function. Otherwise, -1 is returned.
-const arrfindindex = [6,37,6,34,2,1]
-const findindexarr = arrfindindex.findIndex(num => num >12)
-console.log("arrfindindex>>>", JSON.stringify(findindexarr))
+const arrfindindex = [6, 37, 6, 34, 2, 1];
+const findindexarr = arrfindindex.findIndex((num) => num > 12);
+console.log("arrfindindex>>>", JSON.stringify(findindexarr));
+
 // Other Useful Methods:
 // concat(): Used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
 // slice(): Returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included).
