@@ -73,9 +73,22 @@ const somearr2 = arrevery.some((num) => num % 5 === 0);
 console.log("arrsome2>>>", JSON.stringify(somearr2));
 
 // Searching/Finding Elements:
+
 // indexOf(): Returns the first index at which a given element can be found in the array, or -1 if it is not present.
+const arrindex = [3,2,4,5,6,7];
+const indexarr = arrindex.indexOf(4);
+console.log("arrindex>>>",indexarr); // 2
+
 // lastIndexOf(): Returns the last index at which a given element can be found in the array, or -1 if it is not present.
+const arrlastindex = [3,2,4,5,6,7,4,5,8];
+const lastarr = arrlastindex.lastIndexOf(4);
+console.log("lastarr>>>",lastarr); // 6
+
 // includes(): Determines whether an array includes a certain value among its entries, returning true or false as appropriate.
+const arrinclude = [3,2,4,5,6,7,4,5,8];
+const includearr = arrinclude.includes(4);
+console.log("arrinclude>>>",includearr); // true
+
 // find(): Returns the first element in the provided array that satisfies the provided testing function. Otherwise, undefined is returned.
 // findIndex(): Returns the index of the first element in the array that satisfies the provided testing function. Otherwise, -1 is returned.
 
