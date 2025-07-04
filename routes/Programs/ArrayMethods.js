@@ -131,7 +131,6 @@ console.log("ascsorted>>>", JSON.stringify(asc)); // [1, 5, 20, 100]
 const desc = unsorted.sort((a, b) => b - a);
 console.log("descsorted>>>", JSON.stringify(desc)); // [100,20,5,1]
 
-
 const name = "Arun";
 const letters = [...name];
 
