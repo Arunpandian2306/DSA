@@ -108,8 +108,31 @@ console.log("arrfindindex>>>", JSON.stringify(findindexarr));
 
 // Other Useful Methods:
 // concat(): Used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
+const arr1 = [1, 2, 3];
+const arr2 = [3, 4, 5];
+console.log("concat>>>", JSON.stringify(arr1.concat(arr2))); //  [1,2,3,3,4,5]
+
 // slice(): Returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included).
-// substring(): Returns a portion of the string between two specified indices. It extracts characters from start up to, but not including, end.
+const arr3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log("slice>>>", JSON.stringify(arr3.slice(2, 6))); //[3,4,5,6]
+
 // join(): Joins all elements of an array into a string.
+const word = ["arun", "pandian"];
+console.log("joinword>>>", JSON.stringify(word.join(" "))); // "arun pandian"
+
 // reverse(): Reverses an array in place. The first array element becomes the last, and the last array element becomes the first.
+const rev = ["arun", "pandian"];
+console.log("reverseword>>>", JSON.stringify(rev.reverse())); //  ["pandian","arun"]
+
 // sort(): Sorts the elements of an array in place and returns the sorted array.
+const unsorted = [20, 5, 100, 1];
+const asc = unsorted.sort((a, b) => a - b);
+console.log("ascsorted>>>", JSON.stringify(asc)); // [1, 5, 20, 100]
+const desc = unsorted.sort((a, b) => b - a);
+console.log("descsorted>>>", JSON.stringify(desc)); // [100,20,5,1]
+
+
+const name = "Arun";
+const letters = [...name];
+
+console.log("letters>>>", JSON.stringify(letters)); // letters>>> ["A","r","u","n"]
