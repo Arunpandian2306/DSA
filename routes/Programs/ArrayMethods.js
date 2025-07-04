@@ -1,5 +1,7 @@
 // Common Array Methods:
 
+const { JSONCookie } = require("cookie-parser");
+
 // Adding/Removing Elements:
 
 // push(): Adds one or more elements to the end of an array.
@@ -90,8 +92,14 @@ const includearr = arrinclude.includes(4);
 console.log("arrinclude>>>",includearr); // true
 
 // find(): Returns the first element in the provided array that satisfies the provided testing function. Otherwise, undefined is returned.
-// findIndex(): Returns the index of the first element in the array that satisfies the provided testing function. Otherwise, -1 is returned.
+const arrfind = [1,5,65,73,8]
+const findarr = arrfind.find(num => num > 12)
+console.log("arrfind>>>", JSON.stringify(findarr))
 
+// findIndex(): Returns the index of the first element in the array that satisfies the provided testing function. Otherwise, -1 is returned.
+const arrfindindex = [6,37,6,34,2,1]
+const findindexarr = arrfindindex.findIndex(num => num >12)
+console.log("arrfindindex>>>", JSON.stringify(findindexarr))
 // Other Useful Methods:
 // concat(): Used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
 // slice(): Returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included).
