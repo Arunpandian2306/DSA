@@ -29,6 +29,7 @@ const arrsplice = [3, 4, 5, 6, 2, 1, 5, 6, 78];
 arrsplice.splice(4, 2, 87); // 4 starting index 2 no.of element to remove & 87 element to be added
 console.log("splice>>>", JSON.stringify(arrsplice)); //splice>>> [3,4,5,6,87,5,6,78]
 
+/*********************************************************************************************************************************** */
 // Iterating/Transforming Arrays:
 
 // forEach(): Executes a provided function once for each array element.
@@ -74,6 +75,8 @@ console.log("arrsome1>>>", JSON.stringify(somearr1));
 const somearr2 = arrevery.some((num) => num % 5 === 0);
 console.log("arrsome2>>>", JSON.stringify(somearr2));
 
+/************************************************************************************************************************************************************* */
+
 // Searching/Finding Elements:
 
 // indexOf(): Returns the first index at which a given element can be found in the array, or -1 if it is not present.
@@ -94,12 +97,14 @@ console.log("arrinclude>>>", includearr); // true
 // find(): Returns the first element in the provided array that satisfies the provided testing function. Otherwise, undefined is returned.
 const arrfind = [1, 5, 65, 73, 8];
 const findarr = arrfind.find((num) => num > 12);
-console.log("arrfind>>>", JSON.stringify(findarr));
+console.log("arrfind>>>", JSON.stringify(findarr)); //65
 
 // findIndex(): Returns the index of the first element in the array that satisfies the provided testing function. Otherwise, -1 is returned.
 const arrfindindex = [6, 37, 6, 34, 2, 1];
-const findindexarr = arrfindindex.findIndex((num) => num > 12);
+const findindexarr = arrfindindex.findIndex((num) => num > 12); //1
 console.log("arrfindindex>>>", JSON.stringify(findindexarr));
+
+/*******************************************************************************************************************************************/
 
 // Other Useful Methods:
 // concat(): Used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
