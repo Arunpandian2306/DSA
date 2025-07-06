@@ -31,8 +31,6 @@ function mergeSort(arr) {
 function merge(left, right) {
   const result = [];
   let i = 0, j = 0;
-
-  // Merge two sorted arrays
   while (i < left.length && j < right.length) {
     if (left[i] < right[j]) {
       result.push(left[i]);
@@ -42,8 +40,6 @@ function merge(left, right) {
       j++;
     }
   }
-
-  // Add remaining elements
   return result.concat(left.slice(i)).concat(right.slice(j));
 }
 
@@ -63,7 +59,7 @@ router.post('/mergeSort', (req, res) => {
     if (!num || !Array.isArray(num)) {
         res.status(422).json({ error: "invalid format" });
     }
-    const sortelement = mergesort(num);
+    const sortelement = mergeSort(num);
     res.json({ sortelement });
 })
 
