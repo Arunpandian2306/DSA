@@ -15,12 +15,55 @@ function bubble(arr) {
     return arr;
 }
 
+function mergeSort(arr) {
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  const mid = Math.floor(arr.length / 2);
+
+  const left = mergeSort(arr.slice(0, mid));
+  const right = mergeSort(arr.slice(mid));
+
+  return merge(left, right);
+}
+
+function merge(left, right) {
+  const result = [];
+  let i = 0, j = 0;
+
+  // Merge two sorted arrays
+  while (i < left.length && j < right.length) {
+    if (left[i] < right[j]) {
+      result.push(left[i]);
+      i++;
+    } else {
+      result.push(right[j]);
+      j++;
+    }
+  }
+
+  // Add remaining elements
+  return result.concat(left.slice(i)).concat(right.slice(j));
+}
+
+
+
 router.post('/bubbleSort', (req, res) => {
     const { num } = req.body;
     if (!num || !Array.isArray(num)) {
         res.status(422).json({ error: "invalid format" });
     }
     const sortelement = bubble(num);
+    res.json({ sortelement });
+})
+
+router.post('/mergeSort', (req, res) => {
+    const { num } = req.body;
+    if (!num || !Array.isArray(num)) {
+        res.status(422).json({ error: "invalid format" });
+    }
+    const sortelement = mergesort(num);
     res.json({ sortelement });
 })
 
