@@ -17,3 +17,14 @@ function sum(n) {
 }
 
 console.log("sum>>>", sum(5));
+
+// fibonacci
+function fibonacci(n) {
+  if (n <= 1) return n; // base case
+  return fibonacci(n - 1) + fibonacci(n - 2); // sum of last two terms
+}
+
+for (let i = 0; i < 7; i++) {
+  console.log(fibonacci(i));
+}
+// Output: 0 1 1 2 3 5 8
