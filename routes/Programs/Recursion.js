@@ -25,6 +25,14 @@ function fibonacci(n) {
 }
 
 for (let i = 0; i < 7; i++) {
-  console.log(fibonacci(i));
+  console.log("fibonacci>>>", fibonacci(i));
 }
 // Output: 0 1 1 2 3 5 8
+
+//Power function (x^n)
+function power(x, n) {
+  if (n === 0) return 1; // base case: x⁰ = 1
+  return x * power(x, n - 1); // xⁿ = x * xⁿ⁻¹
+}
+
+console.log("powerfunction>>>", power(2, 3)); // 8 → 2 * 2 * 2
