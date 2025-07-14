@@ -29,6 +29,8 @@ function addition(a, b) {
   });
 }
 
+// using then catch
+
 addition(5, 6)
   .then((result) => {
     console.log("success", result);
@@ -36,3 +38,16 @@ addition(5, 6)
   .catch((error) => {
     console.log("error", error);
   });
+
+//   using async and await
+
+async function add() {
+  try {
+    const adding = await addition(7, 9);
+    console.log("success>>>", adding);
+  } catch (error) {
+    console.log("error", error);
+  }
+}
+
+add();
