@@ -15,3 +15,24 @@ async function fetchData() {
   }
 }
 fetchData();
+
+// addition using Promise
+
+function addition(a, b) {
+  return new Promise((resolve, reject) => {
+    console.log("type of a ", JSON.stringify(typeof a));
+    if (typeof a === "number" && typeof b === "number") {
+      resolve(a + b);
+    } else {
+      reject("Must be number");
+    }
+  });
+}
+
+addition(5, 6)
+  .then((result) => {
+    console.log("success", result);
+  })
+  .catch((error) => {
+    console.log("error", error);
+  });
