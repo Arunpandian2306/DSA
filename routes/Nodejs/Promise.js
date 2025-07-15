@@ -51,3 +51,30 @@ async function add() {
 }
 
 add();
+
+// sum of array
+
+function sumOfArray(n) {
+  return new Promise((resolve, reject) => {
+    if (!Array.isArray(n)) {
+      reject("Must be array");
+    }
+    const allNumber = n.every((num) => typeof num === "number");
+    if (!allNumber) {
+      reject("All element must be Array");
+    }
+    const sum = n.reduce((acc, curr) => acc + curr, 0);
+    resolve(sum);
+  });
+}
+
+async function sumarray() {
+  try {
+    const sum = await sumOfArray([1, 2, 3, 4, 5]);
+    console.log("sum", sum);
+  } catch (error) {
+    console.log("error", error);
+  }
+}
+
+sumarray();
