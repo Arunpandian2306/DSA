@@ -78,3 +78,28 @@ async function sumarray() {
 }
 
 sumarray();
+
+function str(n) {
+  return new Promise((resolve, reject) => {
+    const str1 = n.toString();
+    let rev = "";
+    if (!n) {
+      reject("Need String");
+    }
+    for (let i = str1.length - 1; i >= 0; i--) {
+      rev = rev + str1[i];
+    }
+    resolve(rev);
+  });
+}
+
+async function revStr() {
+  try {
+    const st = await str("VOLUME");
+    console.log("reverse", st);
+  } catch (error) {
+    console.log("error", error);
+  }
+}
+
+revStr();
