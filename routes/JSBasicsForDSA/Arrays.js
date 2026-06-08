@@ -4,7 +4,6 @@ for (let i=0; i<numbers.length;i++){
     console.log(numbers[i])
 }
 
-
 // Common Array Methods:
 
 // Adding/Removing Elements:
