@@ -1,6 +1,11 @@
-// Common Array Methods:
+// An array is a data structure used to store multiple values in a single variable.
+const numbers = [10, 20, 30];
+for (let i=0; i<numbers.length;i++){
+    console.log(numbers[i])
+}
 
-const { JSONCookie } = require("cookie-parser");
+
+// Common Array Methods:
 
 // Adding/Removing Elements:
 

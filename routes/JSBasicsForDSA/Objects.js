@@ -1,13 +1,13 @@
 /* 
 Objects are collection of key - value pairs.
-Keys are string( or symbols) and values can be anything 
+Keys are string(or symbols) and values can be anything 
 */
 
-const person ={
+const person = {
     name : 'arun',
     secname : 'pandian',
     age : 25,
-    fullname : function (){
+    fullname : function(){
         return this.name + " " + this.secname;
     }
 }

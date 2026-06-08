@@ -3,7 +3,7 @@
 A function is a block of code designed to perform a particular task
 A function is executed when something invokes it  (calls it)
 Three types of function
-1) function declaration(Regular function)
+1) function declaration (Regular function)
 2) function expression (anonymous function)
 3) arrow function (es6) */
 
@@ -24,7 +24,7 @@ const addition = function(a,b){
 console.log(addition(45,6));
 
 // arrow function
-// It is a shorted way to write a fn in jsvascript, introduced in ES6
+// It is a shorted way to write a fn in javascript, introduced in ES6
 // Use - Callbacks, map, filter, reduce and short fn 
 // const adds = (a,b)=> a+b;
 const adds = (a,b)=> {
