@@ -31,7 +31,7 @@ console.log("shift>>>", JSON.stringify(arrshift)); //shift>>> [4,3,6]
 // splice(): Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
 const arrsplice = [3, 4, 5, 6, 2, 1, 5, 6, 78];
 arrsplice.splice(4, 2, 87); // 4 starting index 2 no.of element to remove & 87 element to be added
-console.log("splice>>>", JSON.stringify(arrsplice)); //splice>>> [3,4,5,6,87,5,6,78]
+console.log("splice>>>", JSON.stringify(arrsplice)); //splice>>> [3,4,5,6,87,5,6,78] // 2, 1 removed
 
 /*********************************************************************************************************************************** */
 // Iterating/Transforming Arrays:
@@ -109,6 +109,9 @@ const findindexarr = arrfindindex.findIndex((num) => num > 12); //1
 console.log("arrfindindex>>>", JSON.stringify(findindexarr));
 
 /*******************************************************************************************************************************************/
+// slice() → Returns a portion of an array without modifying the original array.
+// splice() → Adds, removes, or replaces elements by modifying the original array.
+
 
 // Other Useful Methods:
 // concat(): Used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
