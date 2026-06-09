@@ -9,5 +9,4 @@ function reversestr(n) {
   }
   return rev;
 }
-
 console.log("reverse>>>", reversestr(num));
