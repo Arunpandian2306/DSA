@@ -37,3 +37,11 @@ console.log(revstr) // [ 'nura', 'naidnap' ]
   
 const revstr1 = str.reverse().map(str=> str.split('').reverse().join(''))
 console.log(revstr1) // [ 'naidnap', 'nura' ]
+
+const rev3 = [123,456,789]
+
+const res = rev3.join('').split('').reverse().map(Number)
+console.log(res)
+
+const red = rev3.join('').split('').reduce((sum,rev3)=> sum + Number(rev3),0)
+console.log(red)
