@@ -25,3 +25,10 @@ function binarySearch(arr, target) {
     return -1
 }
 console.log(binarySearch([10, 20, 30, 40, 50, 60, 70], 70));
+
+
+// Lower bound and upper bound are the variations of the binary search
+
+// lower bound = it finds the first index where the value >= target
+
+// upper bound = it finds the first index where the value > target
